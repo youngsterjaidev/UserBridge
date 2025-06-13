@@ -1,4 +1,5 @@
 const express = require("express");
+const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -6,14 +7,16 @@ const bodyParser = require("body-parser");
 const app = express();
 const PORT = 8000;
 
+// Load environment variables from .env file
+dotenv.config();
+
 // Middleware
 app.use(cors());
 app.use("/", express.static("public")); // Serve static files from 'public' directory
 app.use(bodyParser.json());
 
 // MongoDB Connection
-const MONGO_URI =
-  "mongodb+srv://surendernirvana425:uJFcIC5QiQHflK2B@userbridgecluster.fjgwswe.mongodb.net/?retryWrites=true&w=majority&appName=UserBridgeCluster"; // Replace with your URI if using Atlas
+const MONGO_URI = process.env.MONGO_URI;
 
 mongoose
   .connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
