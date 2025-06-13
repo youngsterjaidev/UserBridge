@@ -1,0 +1,26 @@
+{
+  "name": "userbridge",
+  "version": "1.0.0",
+  "description": "This is demo repo to demostrate the Env",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youngsterjaidev/UserBridge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youngsterjaidev/UserBridge/issues"
+  },
+  "homepage": "https://github.com/youngsterjaidev/UserBridge#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.2"
+  }
+}
